@@ -5,8 +5,8 @@
   <title>Our Guys Automotive</title>
   <link rel="stylesheet" href="views/styles.css">
 </head>
-<body ng-controller="mainCtrl">
-<header ng-controller="navCtrl" class="navBar">
+<body ng-controller="mainController">
+<header class="navBar">
 	<div class='navContainer'>
 		<div class='signatureContainer'>
 			<div class="ourGuysSignature">
@@ -15,36 +15,30 @@
 		</div>	
 		<div class="tabContainer">
 			<div class="tab">
-				<div class="navBarRoute">
-					<div class="navLabel">Deals</div>
-				</div>
-			</div>
-		</div> <!--tab Container-->
-		<div class="tabContainer">
-			<div class="tab">
-				<div class="navBarRoute">
-					<div class="navLabel">About</div>
-				</div>
-			</div>
-		</div> <!--tab Container-->	
-		<div class="tabContainer">
-			<div class="tab">
-				<div class="navBarRoute">
-					<div class="navLabel">Contact</div>
-				</div>
-			</div>
-		</div> <!--tab Container-->	
-		<div class="tabContainer">
-			<div class="tab">
-				<div class="navBarRoute">
-					<div class="navLabel">Home</div>
-				</div>
+				<a class="navLabel" ui-sref="Home">Home</a>
+				<a class="navLabel" ui-sref="Contact">Contact</a>
+				<a class="navLabel" ui-sref="About">About</a>
+				<a class="navLabel" ui-sref="Deals">Deals</a>
 			</div>
 		</div> <!--tab Container-->		
 	</div> <!-- navContainer -->		
 </header><!--Header-->
 
+<div class="mainContainer">
+	<div ui-view></div>
+</div>
 
+
+<!--Angular JS CDNS + Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js" type="text/javascript"></script>
+
+<!--Controllers and Services -->
+
+<script src="app.js"></script>
+<script src="Controllers/mainController.js"></script>
+<script src='Services/mainService.js'></script>
 </body>
 
 </html>
